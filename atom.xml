@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-04-10T08:20:10.200Z</updated>
+  <updated>2017-04-10T14:25:50.300Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2017/04/10/react/"/>
+    <id>http://yoursite.com/2017/04/10/react/</id>
+    <published>2017-04-10T14:25:50.300Z</published>
+    <updated>2017-04-10T14:25:50.300Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>javascript的DOM操作</title>
@@ -143,6 +157,105 @@
     <summary type="html">
     
       &lt;h4 id=&quot;1-获取节点&quot;&gt;&lt;a href=&quot;#1-获取节点&quot; class=&quot;headerlink&quot; title=&quot;1.获取节点&quot;&gt;&lt;/a&gt;1.获取节点&lt;/h4&gt;&lt;h4 id=&quot;1-1-document&quot;&gt;&lt;a href=&quot;#1-1-document&quot; class=&quot;head
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>cookie和localStorage的区别</title>
+    <link href="http://yoursite.com/2016/10/01/IE/"/>
+    <id>http://yoursite.com/2016/10/01/IE/</id>
+    <published>2016-10-01T06:25:22.000Z</published>
+    <updated>2017-04-10T14:31:21.069Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="1-cookie和localStorage的区别共同点-都是存储在浏览器端的区别"><a href="#1-cookie和localStorage的区别共同点-都是存储在浏览器端的区别" class="headerlink" title="1.cookie和localStorage的区别共同点 都是存储在浏览器端的区别"></a>1.cookie和localStorage的区别共同点 都是存储在浏览器端的区别</h3><ul>
+<li><p>第一个区别（存储）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">1.cookie：cookie数据始终在同源的http请求中携带（即使不需要），</div><div class="line"> 即cookie在浏览器和服务器之间来回传递。</div></pre></td></tr></table></figure>
+</li>
+<li><p>第二个区别（大小）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">1.cookie：可以限制cookie只属于某个路径下，存储大小限制不同，cookie数据不能超过4k</div><div class="line">2.localStorage：比cookie大很多，最大8M</div></pre></td></tr></table></figure>
+</li>
+<li><p>第三个区别（有效期）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">1.cookie：只在设置的cookie过期时间之前有效</div><div class="line">2.localStorage：始终有效，窗口或浏览器关闭一直保存，因此用作持久保存数据</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="2-session和cookie的区别"><a href="#2-session和cookie的区别" class="headerlink" title="2.session和cookie的区别"></a>2.session和cookie的区别</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">cookie:</div><div class="line">     1.数据存放在客户端浏览器上</div><div class="line">     2.不是很安全，可以在本地修改cookie</div><div class="line">     3.没有安全性问题的时候可以用cookie</div><div class="line">     </div><div class="line">session:</div><div class="line">    1.数据存放在服务器上</div><div class="line">    2.session相对安全</div><div class="line">    3.session有过期时间，在时间内保存在服务器上，当访问次数太多，会比较占用服务器的性能，所以在这种情况下应该选cookie</div></pre></td></tr></table></figure>
+<p>#图片垂直居中 vertical-align:middle;</p>
+<h3 id="1-IE6兼容问题"><a href="#1-IE6兼容问题" class="headerlink" title="1.IE6兼容问题"></a>1.IE6兼容问题</h3><h4 id="1-lt-DOCTYPE-HTML-gt-文档类型声明"><a href="#1-lt-DOCTYPE-HTML-gt-文档类型声明" class="headerlink" title="1.&lt;!DOCTYPE HTML&gt;文档类型声明"></a>1.&lt;!DOCTYPE HTML&gt;文档类型声明</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">产生条件：IE6浏览器，当我们没有书写这个文档声明的时候，会触发IE6浏览器怪异解析现象</div><div class="line">解决方法：书写文档声明</div><div class="line">自己理解：在低版本浏览器必须要写文档声明，不然会报错</div></pre></td></tr></table></figure>
+<h4 id="2-横向双倍外边距（块属性标签float后，又有横向的margin情况下，在IE6显示margin比设置的大）"><a href="#2-横向双倍外边距（块属性标签float后，又有横向的margin情况下，在IE6显示margin比设置的大）" class="headerlink" title="2.横向双倍外边距（块属性标签float后，又有横向的margin情况下，在IE6显示margin比设置的大）"></a>2.横向双倍外边距（块属性标签float后，又有横向的margin情况下，在IE6显示margin比设置的大）</h4><ul>
+<li>有横向外边距的时侯在IE6里双倍显示<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">产生条件：在IE6中块元素浮动后，会出现横向双倍margin现象</div><div class="line">解决方法：在float标签的样式控制中加入display：inline</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="3-默认行高"><a href="#3-默认行高" class="headerlink" title="3.默认行高"></a>3.默认行高</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">产生条件：IE6、IE7、遨游浏览器；设置的文字高度超出盒模型内容区域设置的高度时会影响布局</div><div class="line">解决方法：给超出高度的标签设置overflow：hidden；或者将文字的行高line-height设置为小于块的高度</div></pre></td></tr></table></figure>
+<h4 id="3-默认行高2"><a href="#3-默认行高2" class="headerlink" title="3.默认行高2"></a>3.默认行高2</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">产生条件：清除浮动的时候，写一个空div用&#123;clear：both&#125;，在大部分浏览器没事，在IE6中即使是空的也会有默认行高</div><div class="line">解决放法：设置高度为0，并设置overflow：hidden。</div><div class="line"></div><div class="line">&#123;height:0;/overflow:hidden;/clear:both;&#125;  line-height:0; font-size:0;</div></pre></td></tr></table></figure>
+<h4 id="4-经典3像素bug"><a href="#4-经典3像素bug" class="headerlink" title="4.经典3像素bug"></a>4.经典3像素bug</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">产生条件：IE6浏览器，浮动块元素与未浮动块元素处于同一行，有默认的3像素间距</div><div class="line">解决方法：设置非浮动元素浮动</div></pre></td></tr></table></figure>
+<h4 id="5-a标签hover不适用于所偶遇标签"><a href="#5-a标签hover不适用于所偶遇标签" class="headerlink" title="5.a标签hover不适用于所偶遇标签"></a>5.a标签hover不适用于所偶遇标签</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">产生条件：IE6浏览器中hover中支持a标签的使用，不支持一切其他标签使用；</div><div class="line">解决方法：用javascript模拟a的hover效果；</div></pre></td></tr></table></figure>
+<h4 id="6-table标签当中border-color属性设置无效"><a href="#6-table标签当中border-color属性设置无效" class="headerlink" title="6.table标签当中border-color属性设置无效"></a>6.table标签当中border-color属性设置无效</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">产生条件：IE6中table设置属性border-color无效；</div><div class="line">解决方法：运用CSS样式进行控制，而不是使用属性进行样式的处理</div></pre></td></tr></table></figure>
+<h4 id="7-png格式图片"><a href="#7-png格式图片" class="headerlink" title="7.png格式图片"></a>7.png格式图片</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">产生条件：IE6浏览器，不支持透明</div><div class="line">解决方法：使用javascript进行处理；或者使用gif、jpg图片替换掉png图片的使用</div></pre></td></tr></table></figure>
+<h4 id="8-透明rgba与opacity"><a href="#8-透明rgba与opacity" class="headerlink" title="8.透明rgba与opacity"></a>8.透明rgba与opacity</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">产生条件：IE6不支持此两种透明的设置方法；</div><div class="line">解决办法：使用IE6当中的滤镜filter替换掉，如：opacity：0.6;   filter:alpha(opacity=60)</div></pre></td></tr></table></figure>
+<h4 id="9-子代选择器在IE6中不能使用"><a href="#9-子代选择器在IE6中不能使用" class="headerlink" title="9.子代选择器在IE6中不能使用"></a>9.子代选择器在IE6中不能使用</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">产生条件：IE6浏览器，使用E&gt;F子选择器；</div><div class="line">解决办法：采用其他选择器或者后代选择器进行控制。</div></pre></td></tr></table></figure>
+<h4 id="10-不支持最大最小宽高"><a href="#10-不支持最大最小宽高" class="headerlink" title="10.不支持最大最小宽高"></a>10.不支持最大最小宽高</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">产生条件：IE浏览器，标签的最低高度/宽度设置</div><div class="line"></div><div class="line">.min_width&#123; min-width:300px; width:300px;_width:300px;width:auto;&#125;</div><div class="line"></div><div class="line">解决于方法：为IE6单独设置hack，即_height：最小高度值；_width：最小宽度值（对于IE6,当实际宽度超出定义的宽高时，元素会自动调整宽高）。对于最大宽度和最大高度，没有必要设置兼容，当前对开发者来说，只需要保证IE6下正常运行即可；</div><div class="line"></div><div class="line">hack：一般针对不同的浏览器写不同的css，叫做css hack</div></pre></td></tr></table></figure>
+<h4 id="11-li的间距问题"><a href="#11-li的间距问题" class="headerlink" title="11.li的间距问题"></a>11.li的间距问题</h4> <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">产生条件：IE6浏览器 li标签设置宽高，且li里面的元素发生了浮动；</div><div class="line">    处理方法：方法1：li不设置宽高；   方法2：li内部的标签不进行浮动   3.设置vertical-align:middle;</div></pre></td></tr></table></figure>
+<h4 id="12-img图片下部高度多余5px"><a href="#12-img图片下部高度多余5px" class="headerlink" title="12.img图片下部高度多余5px"></a>12.img图片下部高度多余5px</h4> <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">产生条件：IE6浏览器</div><div class="line">处理方法:将图片转化块级对象，即display：block</div></pre></td></tr></table></figure>
+<h4 id="13-IE6不支持fixed"><a href="#13-IE6不支持fixed" class="headerlink" title="13.IE6不支持fixed"></a>13.IE6不支持fixed</h4> <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">解决办法：IE6设成绝对定位position：absolute</div></pre></td></tr></table></figure>
+<h3 id="2-其他浏览器兼容问题"><a href="#2-其他浏览器兼容问题" class="headerlink" title="2.其他浏览器兼容问题"></a>2.其他浏览器兼容问题</h3><h4 id="1-不同浏览器当中，很多标签的默认样式不同，如默认的外补丁内补丁"><a href="#1-不同浏览器当中，很多标签的默认样式不同，如默认的外补丁内补丁" class="headerlink" title="1.不同浏览器当中，很多标签的默认样式不同，如默认的外补丁内补丁"></a>1.不同浏览器当中，很多标签的默认样式不同，如默认的外补丁内补丁</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">产生条件：不同浏览器</div><div class="line">解决办法：利用CSS reset文件进行样式的清楚，然后再根据需要进行设置；</div></pre></td></tr></table></figure>
+<h4 id="2-img外部的border"><a href="#2-img外部的border" class="headerlink" title="2.img外部的border"></a>2.img外部的border</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">产生条件:img外部有a标签，即img标签有连接时</div><div class="line">解决方法：设置img边框border：0；</div></pre></td></tr></table></figure>
+<h4 id="3-默认图片有间距"><a href="#3-默认图片有间距" class="headerlink" title="3.默认图片有间距"></a>3.默认图片有间距</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">产生条件：img标签（每个img之后敲了回车）</div><div class="line">解决方法：为img设置float的浮动布局方式</div><div class="line"></div><div class="line">     备注: 因为img标签是行内属性标签，所以只要不超出容器宽度，img标签都会排在一行里，但是部分浏览器的img标签之间会有个间距。去掉这个间距使用float是正道。(最佳解决方案:display:block)</div></pre></td></tr></table></figure>
+<h4 id="4-input聚焦框颜色与样式不同"><a href="#4-input聚焦框颜色与样式不同" class="headerlink" title="4.input聚焦框颜色与样式不同"></a>4.input聚焦框颜色与样式不同</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">产生条件：各个浏览器表现不同</div><div class="line">处理方法：使用outline:none,清除默认样式之后再统一设置</div></pre></td></tr></table></figure>
+<h4 id="5-子标签无法设置父标签的高度"><a href="#5-子标签无法设置父标签的高度" class="headerlink" title="5.子标签无法设置父标签的高度"></a>5.子标签无法设置父标签的高度</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">产生条件：父标签内部含一个或多个子标签，父标签没有设置浮动，而子标签发生浮动</div><div class="line">处理方法：</div><div class="line">1.在子标签最后添加清除浮动的设置&lt;div style=&quot;height:0;clear:both&quot;&gt;&lt;/div&gt;</div><div class="line">2.为父标签添加overflow：hidden;的样式</div><div class="line">3.为父标签设置固定的高度</div></pre></td></tr></table></figure>
+<h4 id="6-行内元素布局混乱"><a href="#6-行内元素布局混乱" class="headerlink" title="6.行内元素布局混乱"></a>6.行内元素布局混乱</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">产生条件：行内元素包含框时，如果包含框包含的绝对定位元素以百分比为单位进行定义；</div><div class="line">处理方法：在行内元素当中加&#123;zoom:1&#125;,触发IE的hasLayout。</div></pre></td></tr></table></figure>
+<h4 id="7-多显示一个字"><a href="#7-多显示一个字" class="headerlink" title="7.多显示一个字"></a>7.多显示一个字</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">产生条件：多个浮动元素中间夹杂HTML注释语句，浮动元素宽度设置为100%；则在下一行多显示一个上一行的最后一个字符；</div><div class="line">解决方法：删除注释</div></pre></td></tr></table></figure>
+<h4 id="8-z-index不起作用的-bug"><a href="#8-z-index不起作用的-bug" class="headerlink" title="8.z-index不起作用的 bug"></a>8.z-index不起作用的 bug</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">1)ie6下 z-index无论设置多高都不起作用情况。这种情况发生的条件有三个：1.父标签position属性为relative；2.问题标签含有浮动(float)</div><div class="line">2）所有浏览器</div><div class="line">  层级的高低不仅要看自己，还要看自己的父级</div><div class="line">  父标签position属性为reative或absolute时，子标签的absolute属性相对于父标签而言的，而在IE6下，层级的表现有时候不是子标签的z-index多高，而要看他们的父标签的z-index谁高谁低</div></pre></td></tr></table></figure>
+<h3 id="CSS-hack"><a href="#CSS-hack" class="headerlink" title="CSS hack"></a>CSS hack</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">由于不同厂商的流览器或某浏览器的不同版本（如IE6-IE11,Firefox/Safari/Opera/Chrome等），对CSS的支持、解析不一样，导致在不同浏览器的环境中呈现出不一致的页面展现效果。这时，我们为了获得统一的页面效果，就需要针对不同的浏览器或不同版本写特定的CSS样式，我们把这个针对不同的浏览器/不同版本写相应的CSS code的过程，叫做CSS hack!</div></pre></td></tr></table></figure>
+<h4 id="1-css-hack-3中表现形式"><a href="#1-css-hack-3中表现形式" class="headerlink" title="1.css hack 3中表现形式"></a>1.css hack 3中表现形式</h4><ul>
+<li><p>条件注释</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">CSS hack方式一：条件注释法</div><div class="line">　</div><div class="line">这种方式是IE浏览器专有的Hack方式，微软官方推荐使用的hack方式。举例如下</div><div class="line">	只在IE下生效</div><div class="line">	&lt;!--[if IE]&gt;</div><div class="line">	这段文字只在IE浏览器显示</div><div class="line">	&lt;![endif]--&gt;</div><div class="line">	</div><div class="line">	只在IE6下生效</div><div class="line">	&lt;!--[if IE 6]&gt;</div><div class="line">	这段文字只在IE6浏览器显示</div><div class="line">	&lt;![endif]--&gt;</div><div class="line">	</div><div class="line">	只在IE6以上版本生效</div><div class="line">	&lt;!--[if gte IE 6]&gt;</div><div class="line">	这段文字只在IE6以上(包括)版本IE浏览器显示</div><div class="line">	&lt;![endif]--&gt;</div><div class="line">	</div><div class="line">	只在IE8上不生效</div><div class="line">	&lt;!--[if ! IE 8]&gt;</div><div class="line">	这段文字在非IE8浏览器显示</div><div class="line">	&lt;![endif]--&gt;</div><div class="line">	</div><div class="line">	非IE浏览器生效</div><div class="line">	&lt;!--[if !IE]&gt;</div><div class="line">	这段文字只在非IE浏览器显示</div><div class="line">	&lt;![endif]--&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>类内属性前缀法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">属性前缀法是在CSS样式属性名前加上一些只有特定浏览器才能识别的hack前缀，以达到预期的页面展现效果。</div><div class="line">IE浏览器各版本 CSS hack 对照表</div><div class="line">hack	写法	实例	IE6(S)	IE6(Q)	IE7(S)	IE7(Q)	IE8(S)	IE8(Q)	IE9(S)	IE9(Q)	IE10(S)	IE10(Q)</div><div class="line">*	*color	青色	Y	Y	Y	Y	N	Y	N	Y	N	Y</div><div class="line">+	+color	绿色	Y	Y	Y	Y	N	Y	N	Y	N	Y</div><div class="line">-	-color	黄色	Y	Y	N	N	N	N	N	N	N	N</div><div class="line">_	_color	蓝色	Y	Y	N	Y	N	Y	N	Y	N	N</div><div class="line">#	#color	紫色	Y	Y	Y	Y	N	Y	N	Y	N	Y</div><div class="line">\0	color:red\0	红色	N	N	N	N	Y	N	Y	N	Y	N</div><div class="line">\9\0	color:red\9\0	粉色	N	N	N	N	N	N	Y	N	Y	N</div><div class="line">!important	color:blue !important;color:green;	棕色	N	N	Y	N	Y	N	Y	N	Y	Y</div><div class="line"></div><div class="line">说明：在标准模式中</div><div class="line">	•	“-″减号是IE6专有的hack</div><div class="line">	•	“\9″ IE6/IE7/IE8/IE9/IE10都生效</div><div class="line">	•	“\0″ IE8/IE9/IE10都生效，是IE8/9/10的hack</div><div class="line">	•	“\9\0″ 只对IE9/IE10生效，是IE9/10的hack</div></pre></td></tr></table></figure>
+</li>
+<li><p>选择器前缀法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">选择器前缀法是针对一些页面表现不一致或者需要特殊对待的浏览器，在CSS选择器前加上一些只有某些特定浏览器才能识别的前缀进行hack。</div><div class="line">目前最常见的是</div><div class="line">*html *前缀只对IE6生效</div><div class="line">*+html *+前缀只对IE7生效</div><div class="line">@media screen\9&#123;...&#125;只对IE6/7生效</div><div class="line">@media \0screen &#123;body &#123; background: red; &#125;&#125;只对IE8有效</div><div class="line">@media \0screen\,screen\9&#123;body &#123; background: blue; &#125;&#125;只对IE6/7/8有效</div><div class="line">@media screen\0 &#123;body &#123; background: green; &#125;&#125; 只对IE8/9/10有效</div><div class="line">@media screen and (min-width:0\0) &#123;body &#123; background: gray; &#125;&#125; 只对IE9/10有效</div><div class="line">@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) &#123;body &#123; background: orange; &#125;&#125; 只对IE10有效</div><div class="line">等等</div><div class="line">结合CSS3的一些选择器，如html:first-child，body:nth-of-type(1)，衍生出更多的hack方式，</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="2-css-hack利弊"><a href="#2-css-hack利弊" class="headerlink" title="2.css hack利弊"></a>2.css hack利弊</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">一般情况下，我们尽量避免使用CSS hack，但是有些情况为了顾及用户体验实现向下兼容，不得已才使用hack。比如由于IE8及以下版本不支持CSS3,而我们的项目页面使用了大量CSS3新属性在IE9/Firefox/Chrome下正常渲染，这种情况下如果不使用css3pie或htc或条件注释等方法时,可能就得让IE8-的专属hack出马了。使用hack虽然对页面表现的一致性有好处，但过多的滥用会造成html文档混乱不堪，增加管理和维护的负担。</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;1-cookie和localStorage的区别共同点-都是存储在浏览器端的区别&quot;&gt;&lt;a href=&quot;#1-cookie和localStorage的区别共同点-都是存储在浏览器端的区别&quot; class=&quot;headerlink&quot; title=&quot;1.cookie和loc
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>node基础</title>
+    <link href="http://yoursite.com/2016/09/30/index/"/>
+    <id>http://yoursite.com/2016/09/30/index/</id>
+    <published>2016-09-30T06:25:22.000Z</published>
+    <updated>2017-04-10T10:55:56.885Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="1-node是什么"><a href="#1-node是什么" class="headerlink" title="1.node是什么"></a>1.node是什么</h3>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">1.Node.js是一个基于chrome V8的JavaScript运行时的环境</div><div class="line">2.Node.js是事件驱动，非阻塞式I/O模型</div><div class="line">3.Node.js使用npm包管理器</div><div class="line">4.使用Node.js不仅实现了一个应用，也实现了整个HTTP服务器，所以不需要单独搭建Apache或nginx</div><div class="line">5.Node 是一个服务器端 JavaScript 解释器，它将改变服务器应该如何工作的概念。它的目标是帮助程序员构建高度可伸缩的应用程序，编写能够处理数万条同时连接到一个（只有一个）物理机的连接代码。</div></pre></td></tr></table></figure>
+<h3 id="2-NODE-js的安装"><a href="#2-NODE-js的安装" class="headerlink" title="2.NODE.js的安装"></a>2.NODE.js的安装</h3><ul>
+<li>node下载官网   <a href="https://nodejs.org/en/" target="_blank" rel="external">https://nodejs.org/en/</a> </li>
+<li><p>mac方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install node</div></pre></td></tr></table></figure>
+</li>
+<li><p>window</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">node -v 查看版本号</div></pre></td></tr></table></figure>
+</li>
+<li><p>查看包管理器</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm -v</div></pre></td></tr></table></figure></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;1-node是什么&quot;&gt;&lt;a href=&quot;#1-node是什么&quot; class=&quot;headerlink&quot; title=&quot;1.node是什么&quot;&gt;&lt;/a&gt;1.node是什么&lt;/h3&gt;   &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr
     
     </summary>
     
