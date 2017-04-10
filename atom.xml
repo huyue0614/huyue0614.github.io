@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-04-10T08:20:10.200Z</updated>
+  <updated>2017-04-10T15:48:10.614Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>作业</title>
+    <link href="http://yoursite.com/2017/04/10/index/"/>
+    <id>http://yoursite.com/2017/04/10/index/</id>
+    <published>2017-04-10T02:25:40.000Z</published>
+    <updated>2017-04-10T15:48:10.614Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="作业"><a href="#作业" class="headerlink" title="作业"></a>作业</h4>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;作业&quot;&gt;&lt;a href=&quot;#作业&quot; class=&quot;headerlink&quot; title=&quot;作业&quot;&gt;&lt;/a&gt;作业&lt;/h4&gt;
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>javascript的DOM操作</title>
