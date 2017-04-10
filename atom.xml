@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-04-10T08:20:10.200Z</updated>
+  <updated>2017-04-10T16:03:42.544Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,12 +20,12 @@
     <link href="http://yoursite.com/2017/03/10/javascript%E7%9A%84DOM%E6%93%8D%E4%BD%9C/"/>
     <id>http://yoursite.com/2017/03/10/javascript的DOM操作/</id>
     <published>2017-03-10T02:25:40.000Z</published>
-    <updated>2017-04-10T08:20:10.200Z</updated>
+    <updated>2017-04-10T16:03:42.544Z</updated>
     
     <content type="html"><![CDATA[<h4 id="1-获取节点"><a href="#1-获取节点" class="headerlink" title="1.获取节点"></a>1.获取节点</h4><h4 id="1-1-document"><a href="#1-1-document" class="headerlink" title="1.1 document"></a>1.1 document</h4><ul>
 <li><p>获取ID   如果ID值重复了只能获取一个，ID可以不用获取在js中直接使用。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">语法：document.getElementById</div><div class="line">兼容性：兼容所有浏览器，但是在IE6~7之间id名不区分大小写，在标准浏览器下区分大小写</div></pre></td></tr></table></figure>
-</li>
+<a id="more"></a></li>
 <li><p>通过标签名获取一组标签（获取的是类数组）</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">语法：document.getElementTagName</div><div class="line">兼容性：兼容所有浏览器</div></pre></td></tr></table></figure>
 <ul>
@@ -142,7 +142,9 @@
     
     <summary type="html">
     
-      &lt;h4 id=&quot;1-获取节点&quot;&gt;&lt;a href=&quot;#1-获取节点&quot; class=&quot;headerlink&quot; title=&quot;1.获取节点&quot;&gt;&lt;/a&gt;1.获取节点&lt;/h4&gt;&lt;h4 id=&quot;1-1-document&quot;&gt;&lt;a href=&quot;#1-1-document&quot; class=&quot;head
+      &lt;h4 id=&quot;1-获取节点&quot;&gt;&lt;a href=&quot;#1-获取节点&quot; class=&quot;headerlink&quot; title=&quot;1.获取节点&quot;&gt;&lt;/a&gt;1.获取节点&lt;/h4&gt;&lt;h4 id=&quot;1-1-document&quot;&gt;&lt;a href=&quot;#1-1-document&quot; class=&quot;headerlink&quot; title=&quot;1.1 document&quot;&gt;&lt;/a&gt;1.1 document&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;获取ID   如果ID值重复了只能获取一个，ID可以不用获取在js中直接使用。&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;语法：document.getElementById&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;兼容性：兼容所有浏览器，但是在IE6~7之间id名不区分大小写，在标准浏览器下区分大小写&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     

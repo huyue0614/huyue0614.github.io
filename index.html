@@ -21,7 +21,7 @@
 <meta name="twitter:title" content="胡玉娥的个人博客">
   
   
-    <link rel="icon" href="/css/images/favicon.ico">
+    <link rel="icon" href="favicon.ico">
   
   <link rel="stylesheet" href="/css/style.css">
   
@@ -81,7 +81,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/03/10/javascript的DOM操作/" data-id="cj1cap2m60001i4m4jld1hv23" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/03/10/javascript的DOM操作/" data-id="cj1cb2jie0000b4m4xlq3s3si" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -90,120 +90,11 @@
         <h4 id="1-获取节点"><a href="#1-获取节点" class="headerlink" title="1.获取节点"></a>1.获取节点</h4><h4 id="1-1-document"><a href="#1-1-document" class="headerlink" title="1.1 document"></a>1.1 document</h4><ul>
 <li><p>获取ID   如果ID值重复了只能获取一个，ID可以不用获取在js中直接使用。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">语法：document.getElementById</div><div class="line">兼容性：兼容所有浏览器，但是在IE6~7之间id名不区分大小写，在标准浏览器下区分大小写</div></pre></td></tr></table></figure>
-</li>
-<li><p>通过标签名获取一组标签（获取的是类数组）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">语法：document.getElementTagName</div><div class="line">兼容性：兼容所有浏览器</div></pre></td></tr></table></figure>
-<ul>
-<li>通过类名获取一组元素    （类数组）</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line">语法：var li1 = document.getElementsByClassName(&apos;li1&apos;);   获取一组</div><div class="line">     var li1 = document.getElementsByClassName(&apos;li1&apos;)[0]  获取第一个</div><div class="line">兼容：IE不兼容     </div><div class="line">兼容方法:</div><div class="line">&lt;script&gt;</div><div class="line">   function getByClass(classStr,context) &#123;</div><div class="line">       context=context||document;</div><div class="line">       if(&apos;getComputedStyle&apos; in window) &#123;</div><div class="line">           return Array.prototype.slice.call(context.getElementsByClassName(classStr));</div><div class="line">       &#125;else &#123;</div><div class="line">           //IE678</div><div class="line">           //1.把字符串转成数组：数组中的每一项都是calss名：先取出首尾空格，再通过空格切分成数组</div><div class="line">           var aryClass=classStr.replace(/(^ +)|( +$)/g,&apos;&apos;).split(/\s+/g);</div><div class="line">           var nodeList=context.getElementsByClassName(&apos;*&apos;);</div><div class="line">           var ary=[];</div><div class="line">           for(var i=0;i&lt;nodeList.length;i++)&#123;</div><div class="line">               //当前容器下的每个元素</div><div class="line">               var cur=nodeList[i];</div><div class="line">               //假设法：假设该元素包含数组中的每一项；</div><div class="line">               var bOk=true;</div><div class="line">               //验证当前容器下的每个元素，是否包含数组中的每个class名</div><div class="line">               for(var j=0; j&lt;aryClass.length;j++)&#123;</div><div class="line">                   //保证每个class名必须是独立的个体;</div><div class="line">                   var reg=new RegExp(&apos;(^| +)&apos;+aryClass[j]+&apos;( +|$)&apos;);</div><div class="line">                   if(!reg.test(cur.className))&#123;</div><div class="line">                       bOk=false;</div><div class="line">                       break;</div><div class="line">                   &#125;</div><div class="line">               &#125;</div><div class="line">               if(bOk)&#123;</div><div class="line">                   ary.push(cur);</div><div class="line">               &#125;</div><div class="line">           &#125;</div><div class="line">           return ary;</div><div class="line">   </div><div class="line">       &#125;</div><div class="line">   &#125;</div><div class="line">   var res=getByClass(&apos;box3&apos;);</div><div class="line">   console.log(res);</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
-</li>
-<li><p>通过name的值获取元素（一般用于表单元素，获取一组元素）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">语法：var input = document.getElementsByName(&apos;sex&apos;);</div><div class="line">兼容：在ie浏览器下只对表单元素起作用</div></pre></td></tr></table></figure>
-<ul>
-<li>获取body元素  获取一个html元素</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">语法：document.body   document.documentElement</div><div class="line">兼容：兼容所有浏览器</div></pre></td></tr></table></figure>
-<ul>
-<li>获取可视窗口的高/宽</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">语法:document.documentElement.clientWidth/clientHeight||document.body.clientWidth/clientHeight;</div><div class="line">兼容：不兼容 所以用document.body.clientWidth兼容IE</div></pre></td></tr></table></figure>
-<ul>
-<li>获取元素 （支持类名，id名，标签名，后代选择器）</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">语法:document.querySelector(获取一个元素)  document.querySelectorAll （获取一个元素）</div><div class="line">兼容:不兼容，一般用在移动端获取元素</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h4 id="1-2-节点指针"><a href="#1-2-节点指针" class="headerlink" title="1.2 节点指针"></a>1.2 节点指针</h4><ul>
-<li><p>firstChild 获取第一个元素</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">语法：父节点.firstChild;</div><div class="line">作用：获取元素的首个子节点</div><div class="line">兼容写法： 父节点.firstElementChild||父节点.firstChild</div><div class="line">function lastChild(curEle)&#123;</div><div class="line">        var aChild=this.getChildren(curEle);</div><div class="line">        return aChild[aChild.length-1];</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>lastChild 获取最后一个元素</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">语法：父节点.lastChild;</div><div class="line">作用：获取元素的最后一个子节点</div><div class="line">兼容写法：父节点.lastElementChild||父节点.lastChild</div><div class="line">function lastChild(curEle)&#123;</div><div class="line">     var aChild=this.getChildren(curEle);</div><div class="line">     return aChild[aChild.length-1];</div><div class="line">   &#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>childNodes 获取元素的所有子节点</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">语法:父节点.childNodes</div><div class="line">作用：获取元素的所有子节点</div></pre></td></tr></table></figure>
-<ul>
-<li>previousSibling 获取上一个哥哥节点</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">语法：兄弟节点.previousSibling</div><div class="line">兼容写法: 兄弟节点.previousElementSibling || 兄弟节点.previousSibling</div><div class="line"> function prev(curEle)&#123;</div><div class="line">         if(&apos;getComputedStyle&apos; in window)&#123;</div><div class="line">             return curEle.previousElementSibling;</div><div class="line">         &#125;</div><div class="line">         var pre=curEle.previousSibling;</div><div class="line">         while(pre &amp;&amp; pre.nodeType!==1)&#123;</div><div class="line">             pre=pre.previousSibling;</div><div class="line">         &#125;</div><div class="line">         return pre;</div><div class="line">     &#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>nextSibling  获取上一个弟弟节点</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">语法：兄弟节点.previousSibling</div><div class="line">兼容写法: 兄弟节点.previousElementSibling || 兄弟节点.previousSibling</div><div class="line"> function next(curEle)&#123;</div><div class="line">        if(flg)&#123;</div><div class="line">            return curEle.nextElementSibling;</div><div class="line">        &#125;</div><div class="line">        var nex=curEle.nextSibling;</div><div class="line">        while(nex &amp;&amp; nex.nodeType!==1)&#123;</div><div class="line">            nex=nex.nextSibling;</div><div class="line">        &#125;</div><div class="line">        return nex;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>parentNode 获取已知节点的父节点</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">语法：兄弟节点.parentNode</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h4 id="2-节点操作"><a href="#2-节点操作" class="headerlink" title="2.节点操作"></a>2.节点操作</h4><h4 id="2-1-创建节点"><a href="#2-1-创建节点" class="headerlink" title="2.1 创建节点"></a>2.1 创建节点</h4><ul>
-<li>createElement   创建元素节点<ul>
-<li>语法:document.createElement(元素标签)</li>
-</ul>
-</li>
-<li>createAttribute   创建属性节点<ul>
-<li>语法:document.createAttribute(元素属性)</li>
-</ul>
-</li>
-<li><p>createTextNode 创建文本节点</p>
-<ul>
-<li>语法:document.createTextNode(文本内容)</li>
-</ul>
-<h4 id="2-2插入节点"><a href="#2-2插入节点" class="headerlink" title="2.2插入节点"></a>2.2插入节点</h4><ul>
-<li>appendChild </li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">语法:document.appendChild(所添加的新节点)</div><div class="line">功能:向节点的子节点列表的末尾添加新的子节点</div></pre></td></tr></table></figure>
-<ul>
-<li>insertBefore </li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">语法：已知子节点.insertBefore(所要添加的新节点（新），已知子节点（旧）)</div><div class="line">功能:在已知的子节点前插入一个新的子节点</div></pre></td></tr></table></figure>
-<h4 id="2-3-替换节点"><a href="#2-3-替换节点" class="headerlink" title="2.3 替换节点"></a>2.3 替换节点</h4><ul>
-<li>replaceChild </li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">语法：当前元素.replaceChild(新元素，旧元素);</div><div class="line">功能:将某个子节点替换成另一个</div><div class="line">&lt;html&gt;</div><div class="line">&lt;body&gt;</div><div class="line"></div><div class="line">&lt;ul id=&quot;myList&quot;&gt;&lt;li&gt;Coffee&lt;/li&gt;&lt;li&gt;Tea&lt;/li&gt;&lt;li&gt;Milk&lt;/li&gt;&lt;/ul&gt;</div><div class="line"></div><div class="line">&lt;p id=&quot;demo&quot;&gt;点击按钮来替换列表中的首个项目。&lt;/p&gt;</div><div class="line"></div><div class="line">&lt;button onclick=&quot;myFunction()&quot;&gt;试一下&lt;/button&gt;</div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line">function myFunction()</div><div class="line">&#123;</div><div class="line">var textnode=document.createTextNode(&quot;Water&quot;);</div><div class="line">var item=document.getElementById(&quot;myList&quot;).childNodes[0];</div><div class="line">item.replaceChild(textnode,item.childNodes[0]);</div><div class="line">&#125;</div><div class="line">&lt;/script&gt;</div><div class="line"></div><div class="line">&lt;p&gt;首先创建一个新的文本节点。&lt;br&gt;然后替换首个列表项中的首个子节点。&lt;/p&gt;</div><div class="line">&lt;p&gt;&lt;b&gt;注释：&lt;/b&gt;本例用文本节点 &quot;Water&quot; 替换文本节点 &quot;Coffee&quot;，而不是整个 LI 元素，这是替换节点的另一种方法。&lt;/p&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
-<h4 id="2-4-复制节点"><a href="#2-4-复制节点" class="headerlink" title="2.4 复制节点"></a>2.4 复制节点</h4><ul>
-<li>cloneNode </li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">语法:需要被复制的节点.cloneNode(true/false)</div><div class="line">功能:创建指定节点的副本</div><div class="line">参数:true 复制当前节点及其所有子节点</div><div class="line">  false 仅复制当前的节点</div></pre></td></tr></table></figure>
-<h4 id="2-5-删除节点"><a href="#2-5-删除节点" class="headerlink" title="2.5 删除节点"></a>2.5 删除节点</h4></li>
-<li>removeChild<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">语法:removeChild(要删除的节点)</div><div class="line">功能：删除指定的节点</div><div class="line"> 语法结构:</div><div class="line"> fatherObj.removeChild(childrenObj)</div><div class="line"> 参数解释:</div><div class="line"> 1.fatherObj:要删除子元素的元素对象。</div><div class="line"> 2.childrenObj:要被删除的子元素对象。</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h4 id="3-属性操作"><a href="#3-属性操作" class="headerlink" title="3. 属性操作"></a>3. 属性操作</h4><h4 id="3-1-获取属性"><a href="#3-1-获取属性" class="headerlink" title="3.1 获取属性"></a>3.1 获取属性</h4><ul>
-<li><p>getAttribute</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">语法:元素节点.getAttribute(元素的属性名)</div><div class="line">功能:获取元素节点中指定的属性的属性值</div></pre></td></tr></table></figure>
-<h4 id="3-2-设置属性"><a href="#3-2-设置属性" class="headerlink" title="3.2 设置属性"></a>3.2 设置属性</h4><ul>
-<li>setAttribute</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">语法:元素节点.setAttribute（属性名，属性值）</div><div class="line">功能:创建或改变元素节点的属性</div></pre></td></tr></table></figure>
-<h4 id="3-3-删除属性"><a href="#3-3-删除属性" class="headerlink" title="3.3 删除属性"></a>3.3 删除属性</h4><ul>
-<li>removeAttribute</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">语法:元素节点.removeAttribute（属性名）</div><div class="line">功能:删除元素中的指定属性</div></pre></td></tr></table></figure>
-<h4 id="4-文本操作-XML"><a href="#4-文本操作-XML" class="headerlink" title="4.文本操作  XML"></a>4.文本操作  XML</h4></li>
-<li><p>要插入内容的文本.insertData（offset,String） 从offset指定的位置插入string    offset是偏移量   string想插入的内容</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">xmlDoc=loadXMLDoc(&quot;books.xml&quot;);</div><div class="line">x=xmlDoc.getElementsByTagName(&quot;title&quot;)[0].childNodes[0];</div><div class="line"></div><div class="line">x.insertData(0,&quot;Cooking: &quot;);</div><div class="line">document.write(x.data);</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<ul>
-<li><p>appendData（string）   将string插入到文本节点的末尾处</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">xmlDoc=loadXMLDoc(&quot;books.xml&quot;);</div><div class="line">x=xmlDoc.getElementsByTagName(&quot;title&quot;)[0].childNodes[0];</div><div class="line">x.appendData(&quot; Cooking&quot;);</div><div class="line">document.write(x.data);</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<ul>
-<li><p>deleteData（offset,count） 从offset起删除count个字符</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">xmlDoc=loadXMLDoc(&quot;books.xml&quot;);</div><div class="line">x=xmlDoc.getElementsByTagName(&quot;title&quot;)[0].childNodes[0];</div><div class="line">x.deleteData(0,9);</div><div class="line">document.write(x.data);</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<ul>
-<li><p>replaceData(off,count,string)  从off将count个字符用string替换</p>
-</li>
-<li><p>splitData（offset） splitText（offset） 从offset起将文本节点分成两个节点</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">xmlDoc=loadXMLDoc(&quot;books_cdata.xml&quot;);</div><div class="line">x=xmlDoc.getElementsByTagName(&quot;html&quot;)[0].childNodes[0];</div><div class="line">y=x.splitText(8);</div><div class="line">document.write(x.nodeValue);</div><div class="line">document.write(&quot;&quot;);</div><div class="line">document.write(y.nodeValue);</div></pre></td></tr></table></figure>
-</li>
-<li><p>substring （offset,count）  返回offset起的count个节点</p>
-</li>
-</ul>
-
+        
+          <p class="article-more-link">
+            <a href="/2017/03/10/javascript的DOM操作/#more" class="more-link">More <span class="meta-nav">→</span></a>
+          </p>
+        
       
     </div><!-- .entry-content -->
 
