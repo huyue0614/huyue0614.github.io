@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-04-13T05:18:41.292Z</updated>
+  <updated>2017-04-13T05:21:41.672Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,8 +19,8 @@
     <title>BOM对象</title>
     <link href="http://yoursite.com/2017/03/11/BOM%E6%93%8D%E4%BD%9C/"/>
     <id>http://yoursite.com/2017/03/11/BOM操作/</id>
-    <published>2017-03-11T02:25:40.000Z</published>
-    <updated>2017-04-13T05:18:41.292Z</updated>
+    <published>2017-03-11T02:35:40.000Z</published>
+    <updated>2017-04-13T05:21:41.672Z</updated>
     
     <content type="html"><![CDATA[<h3 id="浏览器对象"><a href="#浏览器对象" class="headerlink" title="浏览器对象"></a>浏览器对象</h3><h4 id="1-window对象"><a href="#1-window对象" class="headerlink" title="1.window对象"></a>1.window对象</h4><pre><code>定义：window对象是BOM的核心，window对象指当前的浏览器窗口。
 </code></pre><h4 id="2-Javascript计时器"><a href="#2-Javascript计时器" class="headerlink" title="2.Javascript计时器"></a>2.Javascript计时器</h4><ul>
