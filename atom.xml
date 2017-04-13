@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-04-13T05:29:17.996Z</updated>
+  <updated>2017-04-13T05:32:47.123Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,11 +20,11 @@
     <link href="http://yoursite.com/2017/03/11/BOM%E6%93%8D%E4%BD%9C/"/>
     <id>http://yoursite.com/2017/03/11/BOM操作/</id>
     <published>2017-03-11T02:25:40.000Z</published>
-    <updated>2017-04-13T05:29:17.996Z</updated>
+    <updated>2017-04-13T05:32:47.123Z</updated>
     
     <content type="html"><![CDATA[<h3 id="浏览器对象"><a href="#浏览器对象" class="headerlink" title="浏览器对象"></a>浏览器对象</h3><h4 id="1-window对象"><a href="#1-window对象" class="headerlink" title="1.window对象"></a>1.window对象</h4><pre><code>定义：window对象是BOM的核心，window对象指当前的浏览器窗口。
-</code></pre><a id="more"></a>
-<h4 id="2-Javascript计时器"><a href="#2-Javascript计时器" class="headerlink" title="2.Javascript计时器"></a>2.Javascript计时器</h4><ul>
+</code></pre><h4 id="2-Javascript计时器"><a href="#2-Javascript计时器" class="headerlink" title="2.Javascript计时器"></a>2.Javascript计时器</h4><a id="more"></a> 
+<ul>
 <li><p>setInterval()    每隔x秒执行一次</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">定义：在执行时，从载入页面后每隔指定的时间执行代码。</div><div class="line">语法：setInterval（代码，交互时间）;</div><div class="line">示例：setInterval(&quot;clock()&quot;,1000);</div></pre></td></tr></table></figure>
 </li>
@@ -81,7 +81,7 @@
     <summary type="html">
     
       &lt;h3 id=&quot;浏览器对象&quot;&gt;&lt;a href=&quot;#浏览器对象&quot; class=&quot;headerlink&quot; title=&quot;浏览器对象&quot;&gt;&lt;/a&gt;浏览器对象&lt;/h3&gt;&lt;h4 id=&quot;1-window对象&quot;&gt;&lt;a href=&quot;#1-window对象&quot; class=&quot;headerlink&quot; title=&quot;1.window对象&quot;&gt;&lt;/a&gt;1.window对象&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;定义：window对象是BOM的核心，window对象指当前的浏览器窗口。
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&quot;2-Javascript计时器&quot;&gt;&lt;a href=&quot;#2-Javascript计时器&quot; class=&quot;headerlink&quot; title=&quot;2.Javascript计时器&quot;&gt;&lt;/a&gt;2.Javascript计时器&lt;/h4&gt;
     
     </summary>
     
