@@ -24,7 +24,7 @@
 <meta property="og:site_name" content="胡玉娥的个人博客">
 <meta property="og:description" content="1.cookie和localStorage的区别共同点 都是存储在浏览器端的区别
 第一个区别（存储）121.cookie：cookie数据始终在同源的http请求中携带（即使不需要）， 即cookie在浏览器和服务器之间来回传递。">
-<meta property="og:updated_time" content="2017-04-14T07:37:03.677Z">
+<meta property="og:updated_time" content="2017-04-14T07:41:08.011Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="cookie和localStorage的区别">
 <meta name="twitter:description" content="1.cookie和localStorage的区别共同点 都是存储在浏览器端的区别
@@ -89,7 +89,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/interview/index.html" data-id="cj1hiu75n0002cgm45i9pkylb" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/interview/index.html" data-id="cj1hiykwf0006f8m4zu8ioyeo" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -146,7 +146,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">选择器前缀法是针对一些页面表现不一致或者需要特殊对待的浏览器，在CSS选择器前加上一些只有某些特定浏览器才能识别的前缀进行hack。</div><div class="line">目前最常见的是</div><div class="line">*html *前缀只对IE6生效</div><div class="line">*+html *+前缀只对IE7生效</div><div class="line">@media screen\9&#123;...&#125;只对IE6/7生效</div><div class="line">@media \0screen &#123;body &#123; background: red; &#125;&#125;只对IE8有效</div><div class="line">@media \0screen\,screen\9&#123;body &#123; background: blue; &#125;&#125;只对IE6/7/8有效</div><div class="line">@media screen\0 &#123;body &#123; background: green; &#125;&#125; 只对IE8/9/10有效</div><div class="line">@media screen and (min-width:0\0) &#123;body &#123; background: gray; &#125;&#125; 只对IE9/10有效</div><div class="line">@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) &#123;body &#123; background: orange; &#125;&#125; 只对IE10有效</div><div class="line">等等</div><div class="line">结合CSS3的一些选择器，如html:first-child，body:nth-of-type(1)，衍生出更多的hack方式，</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<h4 id="2-css-hack利弊"><a href="#2-css-hack利弊" class="headerlink" title="2.css hack利弊"></a>2.css hack利弊</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">一般情况下，我们尽量避免使用CSS hack，但是有些情况为了顾及用户体验实现向下兼容，不得已才使用hack。比如由于IE8及以下版本不支持CSS3,而我们的项目页面使用了大量CSS3新属性在IE9/Firefox/Chrome下正常渲染，这种情况下如果不使用css3pie或htc或条件注释等方法时,可能就得让IE8-的专属hack出马了。使用hack虽然对页面表现的一致性有好处，但过多的滥用会造成html文档混乱不堪，增加管理和维护的负担。</div></pre></td></tr></table></figure>
+<h4 id="2-css-hack利弊"><a href="#2-css-hack利弊" class="headerlink" title="2.css hack利弊"></a>2.css hack利弊</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">一般情况下，我们尽量避免使用CSS hack，但是有些情况为了顾及用户体验实现向下兼容，不得已才使用hack。</div><div class="line">比如由于IE8及以下版本不支持CSS3,而我们的项目页面使用了大量CSS3新属性在IE9/Firefox/Chrome下正常渲染，这种情况下如果不使用css3pie或htc或条件注释等方法时,可能就得让IE8-的专属hack出马了。</div><div class="line">使用hack虽然对页面表现的一致性有好处，但过多的滥用会造成html文档混乱不堪，增加管理和维护的负担。</div></pre></td></tr></table></figure>
 
       
     </div><!-- .entry-content -->
