@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-04-14T07:14:15.925Z</updated>
+  <updated>2017-04-14T07:27:09.770Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,11 +20,12 @@
     <link href="http://yoursite.com/2017/03/12/%E5%8F%98%E9%87%8F/"/>
     <id>http://yoursite.com/2017/03/12/变量/</id>
     <published>2017-03-12T02:25:40.000Z</published>
-    <updated>2017-04-14T07:14:15.925Z</updated>
+    <updated>2017-04-14T07:27:09.770Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Javascript变量"><a href="#Javascript变量" class="headerlink" title="Javascript变量"></a>Javascript变量</h2><h3 id="1-命名"><a href="#1-命名" class="headerlink" title="1.命名"></a>1.命名</h3><ul>
 <li><p>方法</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">1. 匈牙利命名法：变量名=类型+对象描述</div><div class="line"> 基本数据类型：number n  boolean b string s null undfined</div><div class="line"> 引用数据类型：function  array   RegExp  object</div><div class="line"> 2.规则  1）首字符字母或者下划线</div><div class="line">        2）字母数字下划线</div><div class="line">        3）不能使用关键字和保留字</div></pre></td></tr></table></figure>
+<a id="more"></a>
 <ul>
 <li><p>声明</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">1.声明变量   var</div><div class="line">2. 注意 不能没有变量   重复声明   隐式声明   不声明直接赋值</div><div class="line">3.先声明，后读写</div><div class="line">  先赋值，后运算</div></pre></td></tr></table></figure>
@@ -55,7 +56,9 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;Javascript变量&quot;&gt;&lt;a href=&quot;#Javascript变量&quot; class=&quot;headerlink&quot; title=&quot;Javascript变量&quot;&gt;&lt;/a&gt;Javascript变量&lt;/h2&gt;&lt;h3 id=&quot;1-命名&quot;&gt;&lt;a href=&quot;#1-命名&quot; cla
+      &lt;h2 id=&quot;Javascript变量&quot;&gt;&lt;a href=&quot;#Javascript变量&quot; class=&quot;headerlink&quot; title=&quot;Javascript变量&quot;&gt;&lt;/a&gt;Javascript变量&lt;/h2&gt;&lt;h3 id=&quot;1-命名&quot;&gt;&lt;a href=&quot;#1-命名&quot; class=&quot;headerlink&quot; title=&quot;1.命名&quot;&gt;&lt;/a&gt;1.命名&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;方法&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1. 匈牙利命名法：变量名=类型+对象描述&lt;/div&gt;&lt;div class=&quot;line&quot;&gt; 基本数据类型：number n  boolean b string s null undfined&lt;/div&gt;&lt;div class=&quot;line&quot;&gt; 引用数据类型：function  array   RegExp  object&lt;/div&gt;&lt;div class=&quot;line&quot;&gt; 2.规则  1）首字符字母或者下划线&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        2）字母数字下划线&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        3）不能使用关键字和保留字&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
